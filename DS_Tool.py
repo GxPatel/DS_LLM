@@ -107,3 +107,23 @@ if uploaded_file:
     # Button to update the chart based on selection
     if st.button("Update Chart"):
         visualize_data(df, st.session_state.chart_type, st.session_state.x_axis, st.session_state.y_axis)
+
+# Footer
+st.markdown("""
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        color: #555;
+    }
+    </style>
+    <div class="footer">
+        <p>© 2024 All rights reserved. <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
+    </div>
+    """, unsafe_allow_html=True)
