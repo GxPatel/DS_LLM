@@ -112,7 +112,7 @@ if uploaded_file:
 st.markdown("""
     <style>
     .footer {
-        position: sticky;
+        position: fixed;
         bottom: 0;
         z-index: 1000;
         width: 100%;
