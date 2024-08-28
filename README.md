@@ -45,10 +45,11 @@ Users can choose the chart type, X-axis, and Y-axis dynamically from the availab
 - Visualize the relationship between two columns with a scatter plot, bar chart, or histogram.
 
 ### Screenshots
-![Screenshot 2024-08-22 190136](https://github.com/user-attachments/assets/c6ec55ba-078d-4b2c-b556-91cd0afd5423)
-![Screenshot 2024-08-22 190210](https://github.com/user-attachments/assets/28ded331-4772-4816-b720-5a1235e833bd)
-![Screenshot 2024-08-22 190248](https://github.com/user-attachments/assets/b47e841d-a442-4ef7-ae09-f681198e2cb3)
-![image](https://github.com/user-attachments/assets/8fcd0a2f-3501-43be-bddd-2ff92253d166)
+![ss1](https://github.com/user-attachments/assets/47ded7bc-5aec-4d4e-b0c6-50da38a30a89)
+![ss2](https://github.com/user-attachments/assets/975c2eb7-8dfb-4b3d-8011-a399b17cb15e)
+![ss3](https://github.com/user-attachments/assets/a7849a95-c9a1-4539-94a5-f15fa526aac4)
+![ss4](https://github.com/user-attachments/assets/5cfd2797-a499-44a6-99b4-597ae50c3017)
+![ss5](https://github.com/user-attachments/assets/b62e081a-3c2b-4570-9a54-89a784137aba)
 
 
 ### Future Enhancements
