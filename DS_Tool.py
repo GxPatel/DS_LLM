@@ -52,19 +52,10 @@ st.title("Data Preprocessing and Visualization Tool")
 
 uploaded_file = st.file_uploader("Upload your dataset (CSV, XLSX, JSON)", type=['csv', 'xlsx', 'json'])
 
-# Check if new file uploaded
-if uploaded_file:
-    if 'prev_file_name' not in st.session_state:
-        st.session_state.prev_file_name = None
-        st.session_state.dataset_changed = False
+if 'prev_file_name' not in st.session_state:
+    st.session_state.prev_file_name = None
 
-    # Check if file has changed
-    if st.session_state.prev_file_name != uploaded_file.name:
-        st.session_state.prev_file_name = uploaded_file.name
-        st.session_state.dataset_changed = True  # Mark dataset as changed
-        st.session_state.x_axis = None  # Reset X and Y axis
-        st.session_state.y_axis = None
-    
+if uploaded_file:
     # Read the uploaded file
     if uploaded_file.name.endswith('.csv'):
         df = pd.read_csv(uploaded_file, encoding="ISO-8859-1")
@@ -72,9 +63,6 @@ if uploaded_file:
         df = pd.read_excel(uploaded_file)
     elif uploaded_file.name.endswith('.json'):
         df = pd.read_json(uploaded_file)
-    elif st.session_state.prev_file_name != uploaded_file.name:
-        st.warning("New dataset detected. Please refresh the page before uploading a new dataset.")
-        st.stop() 
 
     st.write("Original Data")
     st.write(df)
