@@ -58,6 +58,7 @@ if 'prev_file_name' not in st.session_state:
 if uploaded_file:
     if st.session_state.prev_file_name and uploaded_file.name != st.session_state.prev_file_name:
         st.warning("Please refresh the page before uploading a new dataset!")
+        st.stop()
     else:
         # Update the file name in session state to track the current dataset
         st.session_state.prev_file_name = uploaded_file.name
