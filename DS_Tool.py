@@ -56,12 +56,7 @@ if 'prev_file_name' not in st.session_state:
     st.session_state.prev_file_name = None
 
 if uploaded_file:
-    if st.session_state.prev_file_name != uploaded_file.name:
-        st.warning("New dataset detected. Please refresh the page before uploading a new dataset.")
-        st.stop() 
-
-    st.session_state.prev_file_name = uploaded_file.name
-
+    
     # Read the uploaded file
     if uploaded_file.name.endswith('.csv'):
         df = pd.read_csv(uploaded_file, encoding="ISO-8859-1")
@@ -69,6 +64,11 @@ if uploaded_file:
         df = pd.read_excel(uploaded_file)
     elif uploaded_file.name.endswith('.json'):
         df = pd.read_json(uploaded_file)
+    elif st.session_state.prev_file_name != uploaded_file.name:
+        st.warning("New dataset detected. Please refresh the page before uploading a new dataset.")
+        st.stop() 
+        
+    st.session_state.prev_file_name = uploaded_file.name
 
     st.write("Original Data")
     st.write(df)
