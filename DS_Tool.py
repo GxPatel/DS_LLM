@@ -116,14 +116,14 @@ st.markdown("""
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #f1f1f1;
+        background-color: rgba(255,2555,255,35);
         text-align: center;
         padding: 10px;
         font-size: 12px;
-        color: #555;
+        color: black;
     }
     </style>
     <div class="footer">
-        <p>© 2024 All rights reserved. <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
+        <p> © 2024 All rights reserved. <a style='display: block; text-align: center;' href="https://github.com/GxPatel" target="_blank"> GxPatel </a></p>
     </div>
     """, unsafe_allow_html=True)
