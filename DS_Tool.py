@@ -112,13 +112,12 @@ if uploaded_file:
 st.markdown("""
     <style>
     .footer {
-        position: fixed;
-        left: 0;
+        position: sticky;
         bottom: 0;
+        z-index: 1000;
         width: 100%;
         background-color: rgba(255,2555,255,35);
         text-align: center;
-        padding: 10px;
         font-size: 12px;
         color: black;
     }
@@ -127,3 +126,10 @@ st.markdown("""
         <p> © 2024 All rights reserved. <a style='display: block; text-align: center;' href="https://github.com/GxPatel" target="_blank"> GxPatel </a></p>
     </div>
     """, unsafe_allow_html=True)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
